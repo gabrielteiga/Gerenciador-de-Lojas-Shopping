@@ -24,11 +24,11 @@ public class Data {
             if(dia <= 30){
                 return true;
             }  
-        } else if((mes == 2) && (this.verificaAnoBissexto(ano))){
+        } else if((mes == 2) && (ano % 4 == 0)){
             if(dia <= 29){
                 return true;
             }
-        } else if((mes == 2) && (this.verificaAnoBissexto(ano))){
+        } else if((mes == 2) && (ano % 4 == 0)){
             if(dia <= 28){
                 return true;
             }
@@ -37,8 +37,8 @@ public class Data {
         return false;
     }
 
-    public boolean verificaAnoBissexto(int ano){
-        if(ano % 4 == 0){
+    public boolean verificaAnoBissexto(){
+        if(this.ano % 4 == 0){
             return true;
         }
         return false;

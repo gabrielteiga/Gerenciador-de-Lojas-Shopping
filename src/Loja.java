@@ -49,11 +49,12 @@ public class Loja{
     public double gastosComSalario(){
         if(this.getSalarioBaseFuncionario() == -1){
             return -1;
-        }
-        double gastosComSalario = this.gastosComSalario() * this.quantidadeFuncionarios;
+        } else{
+        double gastosComSalario = this.salarioBaseFuncionario * this.quantidadeFuncionarios;
         return gastosComSalario;
+        }
     }
-
+    
     public char tamanhoDaLoja(){
         if(this.getQuantidadeFuncionarios() < 10){
             return 'P';
