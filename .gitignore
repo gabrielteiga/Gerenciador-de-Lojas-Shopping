@@ -7,3 +7,5 @@ src/TesteData.java
 bin/TesteData.class
 src/TesteCosmetico.java
 bin/TesteCosmetico.class
+src/TesteVestuario.java
+bin/TesteVestuario.class
