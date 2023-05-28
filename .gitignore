@@ -9,3 +9,5 @@ src/TesteCosmetico.java
 bin/TesteCosmetico.class
 src/TesteVestuario.java
 bin/TesteVestuario.class
+src/TesteBijuteria.java
+bin/TesteBijuteria.class
