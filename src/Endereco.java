@@ -66,5 +66,16 @@ public class Endereco {
 
     public void setComplemento(String complemento) {
         this.complemento = complemento;
-    } 
+    }
+
+    @Override
+    public String toString() {
+        return "Nome da Rua: " + this.getNomeDaRua() +
+        "\nCidade: " + this.getCidade() +
+        "\nEstado: " + this.getEstado() +
+        "\nPaís: " + this.getPais() +
+        "\nCEP: " + this.getCep() +
+        "\nNúmero: " + this.getNumero() +
+        "\nComplemento: " + this.getComplemento();
+    }
 }

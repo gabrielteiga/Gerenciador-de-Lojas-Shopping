@@ -77,8 +77,8 @@ public class Loja{
         return "Loja: " + this.getNome() +
         "\nQuant. Funcionarios: " + this.getQuantidadeFuncionarios() +
         "\nSal. Base: " + this.getSalarioBaseFuncionario() +
-        "\nEndereço: " + this.getEndereco() +
-        "\nData fundação: " + this.getEndereco();
+        "\n---Endereço---\n" + this.getEndereco().toString() +
+        "\nData fundação: " + this.getDataFundacao().toString();
     }
 
     public double gastosComSalario(){
