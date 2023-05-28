@@ -5,6 +5,18 @@ public class Loja{
     private Endereco endereco;
     private Data dataFundacao;
 
+    public Loja(String nome, int quantidadeFuncionarios){
+        this.nome = nome;
+        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.salarioBaseFuncionario = -1;
+    }
+
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario){
+        this.nome = nome;
+        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.salarioBaseFuncionario = salarioBaseFuncionario;
+    }
+
     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data fundacao){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
@@ -64,7 +76,9 @@ public class Loja{
     public String toString() {
         return "Loja: " + this.getNome() +
         "\nQuant. Funcionarios: " + this.getQuantidadeFuncionarios() +
-        "\nSal. Base: " + this.getSalarioBaseFuncionario();
+        "\nSal. Base: " + this.getSalarioBaseFuncionario() +
+        "\nEndereço: " + this.getEndereco() +
+        "\nData fundação: " + this.getEndereco();
     }
 
     public double gastosComSalario(){
