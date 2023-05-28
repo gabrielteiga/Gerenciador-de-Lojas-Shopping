@@ -41,7 +41,8 @@ public class Produto {
     @Override
     public String toString() {
         return "Produto: " + this.getNome() +
-        "\nPreço: " + this.getPreco();
+        "\nPreço: " + this.getPreco() +
+        "\nData de Validade: " + this.getDataValidade();
     }
 
     public boolean estaVencido(Data d1){
