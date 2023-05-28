@@ -13,3 +13,5 @@ src/TesteBijuteria.java
 bin/TesteBijuteria.class
 src/TesteAlimentacao.java
 bin/TesteAlimentacao.class
+src/TesteInformatica.java
+bin/TesteInformatica.class
