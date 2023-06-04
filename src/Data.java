@@ -28,7 +28,7 @@ public class Data {
             if(dia <= 29){
                 return true;
             }
-        } else if((mes == 2) && (ano % 4 == 0)){
+        } else if(mes == 2){
             if(dia <= 28){
                 return true;
             }
@@ -38,10 +38,7 @@ public class Data {
     }
 
     public boolean verificaAnoBissexto(){
-        if(this.ano % 4 == 0){
-            return true;
-        }
-        return false;
+        return this.ano % 4 == 0;
     }
 
     public int getDia() {

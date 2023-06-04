@@ -4,7 +4,9 @@ public class Loja{
     private double salarioBaseFuncionario;
     private Endereco endereco;
     private Data dataFundacao;
+    private Produto[] estoqueProdutos;
 
+    // ETAPA 1
     public Loja(String nome, int quantidadeFuncionarios){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
@@ -16,7 +18,10 @@ public class Loja{
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
+    // ETAPA 1 FIM
 
+
+    // ETAPA 2
     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data fundacao){
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
@@ -32,6 +37,18 @@ public class Loja{
         this.endereco = endereco;
         this.dataFundacao = fundacao;
     }
+    // ETAPA 2 FIM
+
+    // ETAPA 4
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data fundacao, int quantidadeMaximaProdutos){
+        this.nome = nome;
+        this.quantidadeFuncionarios = quantidadeFuncionarios;
+        this.salarioBaseFuncionario = salarioBaseFuncionario;
+        this.endereco = endereco;
+        this.dataFundacao = fundacao;
+        this.estoqueProdutos = new Produto[quantidadeMaximaProdutos];
+    }
+    // ETAPA 4 FIM
 
     public String getNome() {
         return nome;
@@ -77,8 +94,8 @@ public class Loja{
         return "Loja: " + this.getNome() +
         "\nQuant. Funcionarios: " + this.getQuantidadeFuncionarios() +
         "\nSal. Base: " + this.getSalarioBaseFuncionario() +
-        "\n---Endereço---\n" + this.getEndereco().toString() +
-        "\nData fundação: " + this.getDataFundacao().toString();
+        "\n---Endereço---\n" + this.getEndereco() +
+        "\nData fundação: " + this.getDataFundacao();
     }
 
     public double gastosComSalario(){
@@ -98,5 +115,44 @@ public class Loja{
         } else{
             return 'G';
         }
+    }
+
+    public Produto[] getEstoqueProdutos() {
+        return estoqueProdutos;
+    }
+
+    public void setEstoqueProdutos(Produto[] estoqueProdutos) {
+        this.estoqueProdutos = estoqueProdutos;
+    }
+
+    public void imprimeProdutos(){
+        for(int i = 0; i < this.getEstoqueProdutos().length; i++){
+            if(this.getEstoqueProdutos()[i] != null){
+                System.out.println("Produto " + (i + 1));
+                System.out.println(this.getEstoqueProdutos()[i].toString());
+            }
+        }
+    }
+
+    public boolean insereProduto(Produto produto){
+        for(int i = 0; i < this.getEstoqueProdutos().length; i++){
+            if(this.getEstoqueProdutos()[i] == null){
+                this.getEstoqueProdutos()[i] = produto;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removeProduto(String nomeProduto){
+        for(int i = 0; i < this.getEstoqueProdutos().length; i++){
+            if (this.getEstoqueProdutos()[i] != null){
+                if (this.getEstoqueProdutos()[i].getNome().equalsIgnoreCase(nomeProduto)){
+                    this.getEstoqueProdutos()[i] = null;
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

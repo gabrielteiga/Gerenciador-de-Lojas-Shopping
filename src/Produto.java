@@ -42,7 +42,7 @@ public class Produto {
     public String toString() {
         return "Produto: " + this.getNome() +
         "\nPreço: " + this.getPreco() +
-        "\nData de Validade: " + this.getDataValidade();
+        "\nData de Validade: " + this.getDataValidade() + "\n";
     }
 
     public boolean estaVencido(Data d1){
