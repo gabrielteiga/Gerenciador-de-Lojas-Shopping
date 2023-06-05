@@ -6,6 +6,11 @@ public class Alimentacao extends Loja{
         this.dataAlvara = dataAlvara;
     }
 
+    public Alimentacao(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, Data dataAlvara, int quantidadeMaximaProdutos){
+        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, quantidadeMaximaProdutos);
+        this.dataAlvara = dataAlvara;
+    }
+
     public Data getDataAlvara() {
         return dataAlvara;
     }

@@ -46,12 +46,8 @@ public class Produto {
     }
 
     public boolean estaVencido(Data d1){
-        if(d1.getAno() <= this.getDataValidade().getAno()){
-            if (d1.getMes() <= this.getDataValidade().getMes()) {
-                if (d1.getDia() <= this.getDataValidade().getDia()) {
-                    return false;
-                }
-            }
+        if((d1.getAno() <= this.getDataValidade().getAno()) && (d1.getMes() <= this.getDataValidade().getMes()) && (d1.getDia() <= this.getDataValidade().getDia())){
+            return false;
         }
         return true;
     }

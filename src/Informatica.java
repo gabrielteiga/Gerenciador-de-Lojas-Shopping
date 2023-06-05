@@ -6,6 +6,11 @@ public class Informatica extends Loja{
         this.seguroEletronicos = seguroEletronicos;
     }
 
+    public Informatica(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, double seguroEletronicos, int quantidadeMaximaProdutos){
+        super(nome, quantidadeFuncionarios, salarioBaseFuncionario, endereco, dataFundacao, quantidadeMaximaProdutos);
+        this.seguroEletronicos = seguroEletronicos;
+    }
+
     public double getSeguroEletronicos() {
         return seguroEletronicos;
     }
