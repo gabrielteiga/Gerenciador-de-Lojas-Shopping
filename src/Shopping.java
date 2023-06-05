@@ -72,22 +72,22 @@ public class Shopping {
 
 
     public int quantidadeLojasPorTipo(String tipoDeLoja){
-        Class<?> c;
-        if (tipoDeLoja == "Cosmetico") {
-            c = Cosmetico.class;
-            return this.contadorClasse(c);
-        } else if (tipoDeLoja == "Vestuario") {
-            c = Vestuario.class;
-            return this.contadorClasse(c);
-        } else if (tipoDeLoja == "Bijuteria") {
-            c = Bijuteria.class;
-            return this.contadorClasse(c);
-        } else if (tipoDeLoja == "Alimentacao"){
-            c = Alimentacao.class;
-            return this.contadorClasse(c);
-        } else if (tipoDeLoja == "Informatica"){
-            c = Informatica.class;
-            return this.contadorClasse(c);
+        Class<?> classeGeral;
+        if (tipoDeLoja.equalsIgnoreCase("Cosmetico")) {
+            classeGeral = Cosmetico.class;
+            return this.contadorClasse(classeGeral);
+        } else if (tipoDeLoja.equalsIgnoreCase("Vestuario")) {
+            classeGeral = Vestuario.class;
+            return this.contadorClasse(classeGeral);
+        } else if (tipoDeLoja.equalsIgnoreCase("Bijuteria")) {
+            classeGeral = Bijuteria.class;
+            return this.contadorClasse(classeGeral);
+        } else if (tipoDeLoja.equalsIgnoreCase("Alimentacao")){
+            classeGeral = Alimentacao.class;
+            return this.contadorClasse(classeGeral);
+        } else if (tipoDeLoja.equalsIgnoreCase("Informatica")){
+            classeGeral = Informatica.class;
+            return this.contadorClasse(classeGeral);
         } else{
             return -1;
         }
