@@ -16,24 +16,25 @@ public class Data {
     }
 
     private boolean validaData(int dia, int mes, int ano){
-        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
-            if(dia <= 31){
-                return true;
-            }
-        } else if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
-            if(dia <= 30){
-                return true;
-            }  
-        } else if((mes == 2) && (ano % 4 == 0)){
-            if(dia <= 29){
-                return true;
-            }
-        } else if(mes == 2){
-            if(dia <= 28){
-                return true;
+        if(dia > 0 && ano >= 0){
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+                if(dia <= 31){
+                    return true;
+                }
+            } else if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
+                if(dia <= 30){
+                    return true;
+                }  
+            } else if((mes == 2) && (ano % 4 == 0)){
+                if(dia <= 29){
+                    return true;
+                }
+            } else if(mes == 2){
+                if(dia <= 28){
+                    return true;
+                }
             }
         }
-
         return false;
     }
 
